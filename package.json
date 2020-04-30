@@ -30,7 +30,9 @@
     "yo-doc": "yo ./generator-eui/app/documentation.js",
     "release": "node ./scripts/release.js",
     "postinstall": "node ./scripts/postinstall.js",
-    "version": "node ./scripts/update-changelog-version.js"
+    "version": "node ./scripts/update-changelog-version.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -54,7 +56,8 @@
     "react-vis": "1.10.2",
     "resize-observer-polyfill": "^1.5.0",
     "tabbable": "^1.1.0",
-    "uuid": "^3.1.0"
+    "uuid": "^3.1.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@elastic/eslint-config-kibana": "^0.15.0",
@@ -156,5 +159,6 @@
     "prop-types": "^15.5.0",
     "react": "^16.3",
     "react-dom": "^16.3"
-  }
+  },
+  "snyk": true
 }
